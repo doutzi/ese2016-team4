@@ -129,10 +129,20 @@
 						placeholder="Ad Title" /></td>
 					
 				<td>
-					<form:select name="options" path="options">
+					<form:select name="propertyType" path="propertyType">
 						<form:option value="1" label="Room"/>
 						<form:option value="2" label="Studio"/>
 						<form:option value="3" label="Flat"/>
+						<form:option value="4" label="House"/>
+
+					</form:select>			
+				</td>
+				
+				<td>
+					<form:select name="sellType" path="sellType">
+						<form:option value="1" label="Rent"/>
+						<form:option value="2" label="Buy"/>
+						<form:option value="3" label="Auction"/>
 					</form:select>			
 				</td>
 			</tr>

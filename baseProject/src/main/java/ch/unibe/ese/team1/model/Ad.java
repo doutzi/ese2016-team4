@@ -108,7 +108,10 @@ public class Ad {
 	@Column(nullable = false)
 	private boolean flat;
 	
-	private int options;
+	@Column(nullable = false)
+	private boolean house;
+	
+	private int propertyType;
 
 	@Fetch(FetchMode.SELECT)
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -382,11 +385,11 @@ public class Ad {
 		return true;
 	}
 
-	public int getOptions() {
-		return options;
+	public int getPropertyType() {
+		return propertyType;
 	}
 
-	public void setOptions(int options) {
-		this.options = options;
+	public void setPropertyType(int propertyType) {
+		this.propertyType = propertyType;
 	}
 }

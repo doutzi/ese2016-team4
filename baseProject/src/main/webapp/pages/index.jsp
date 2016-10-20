@@ -36,9 +36,10 @@
 						<br />
 						<p>
 							<i><c:choose>
-									<c:when test="${ad.getOptions() == 1}">Room</c:when>
-									<c:when test="${ad.getOptions() == 2}">Studio</c:when>
-									<c:when test="${ad.getOptions() == 3}">Flat</c:when>
+									<c:when test="${ad.getPropertyType() == 1}">Room</c:when>
+									<c:when test="${ad.getPropertyType() == 2}">Studio</c:when>
+									<c:when test="${ad.getPropertyType() == 3}">Flat</c:when>
+									<c:when test="${ad.getPropertyType() == 4}">House</c:when>
 								</c:choose></i>
 						</p>
 					</div>

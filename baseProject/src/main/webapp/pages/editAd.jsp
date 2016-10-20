@@ -143,25 +143,28 @@
 				<td><form:input id="field-title" path="title" value="${ad.title}" /></td>
 				<td>
 					<c:choose>
-						<c:when test="${ad.getOptions() == 1}">
-							<form:select name="options" path="options">
+						<c:when test="${ad.getPropertyType() == 1}">
+							<form:select name="propertyType" path="propertyType">
 								<form:option value="1" label="Room"/>
 								<form:option value="2" label="Studio"/>
 								<form:option value="3" label="Flat"/>
+								<form:option value="4" label="House"/>
 							</form:select>	
 						</c:when>
-						<c:when test="${ad.getOptions() == 2}">
-							<form:select name="options" path="options">
+						<c:when test="${ad.getPropertyType() == 2}">
+							<form:select name="propertyType" path="propertyType">
 								<form:option value="2" label="Studio"/>
 								<form:option value="1" label="Room"/>
 								<form:option value="3" label="Flat"/>
+								<form:option value="4" label="House"/>
 							</form:select>	
 						</c:when>
 						<c:otherwise>
-							<form:select name="options" path="options">
+							<form:select name="propertyType" path="propertyType">
 								<form:option value="3" label="Flat"/>
 								<form:option value="1" label="Room"/>
 								<form:option value="2" label="Studio"/>
+								<form:option value="4" label="House"/>
 							</form:select>	
 						</c:otherwise>
 					</c:choose>

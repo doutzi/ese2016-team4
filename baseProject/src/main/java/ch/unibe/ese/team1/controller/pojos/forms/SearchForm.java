@@ -15,6 +15,7 @@ public class SearchForm {
 	private boolean studio;
 	private boolean room;
 	private boolean flat;
+	private boolean house;
 
 	@NotBlank(message = "Required")
 	@Pattern(regexp = "^[0-9]{4} - [-\\w\\s\\u00C0-\\u00FF]*", message = "Please pick a city from the list")
@@ -35,6 +36,9 @@ public class SearchForm {
 	private boolean bothRoomAndFlat;
 	private boolean bothStudioAndFlat;
 	private boolean allRoomAndStudioAndFlat;
+	private boolean noRoomNoStudioNoFlatNoHouse;
+	
+	int type;
 	
 	public String getCity() {
 		return city;
@@ -123,7 +127,14 @@ public class SearchForm {
 	public void setAllRoomAndStudioAndFlat(boolean allRoomAndStudioAndFlat) {
 		this.allRoomAndStudioAndFlat = allRoomAndStudioAndFlat;
 	}
+	public boolean getNoRoomNoStudioNoFlatNoHouse() {
+		return noRoomNoStudioNoFlatNoHouse;
+	}
 
+	public void setNoRoomNoStudioNoFlatNoHouse(boolean noRoomNoStudioNoFlatNoHouse) {
+		this.noRoomNoStudioNoFlatNoHouse = noRoomNoStudioNoFlatNoHouse;
+	}
+	
 	// //////////////////
 	// Filtered results//
 	// //////////////////
@@ -157,6 +168,8 @@ public class SearchForm {
 	private boolean studioHelper;
 	
 	private boolean flatHelper;
+	
+	private boolean houseHelper;
 
 	// the ugly stuff
 	
@@ -288,6 +301,32 @@ public class SearchForm {
 	public void setFlatHelper(boolean flatHelper) {
 		this.flatHelper = flatHelper;
 	}
+	
+	public boolean getHouseHelper() {
+		return houseHelper;
+	}
 
+	public void setHouseHelper(boolean houseHelper) {
+		this.houseHelper = houseHelper;
+	}
+	
+	
+	public int getType(){
+		return type;
+	}
+	
+	public void setType(int type) {
+		this.type = type;
+	}
+
+	public boolean getHouse() {
+		return house;
+	}
+
+	public void setHouse(boolean house) {
+		this.house = house;
+	}
+
+	
 	
 }

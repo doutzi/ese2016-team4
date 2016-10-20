@@ -76,7 +76,7 @@ public class AdService {
 
 		ad.setStudio(placeAdForm.getStudio());
 		
-		ad.setOptions(placeAdForm.getOptions());
+		ad.setPropertyType(placeAdForm.getPropertyType());
 
 		// take the zipcode - first four digits
 		String zip = placeAdForm.getCity().substring(0, 4);
@@ -250,7 +250,7 @@ public class AdService {
 
 		else {
 			results = adDao.findByStudioAndPrizePerMonthLessThan(
-					searchForm.getStudio(), searchForm.getPrize() + 1);
+					searchForm.getType(), searchForm.getPrize() + 1);
 		}
 
 		// filter out zipcode

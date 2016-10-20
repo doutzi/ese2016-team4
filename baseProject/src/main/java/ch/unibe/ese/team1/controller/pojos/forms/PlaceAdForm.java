@@ -47,15 +47,17 @@ public class PlaceAdForm {
 	private String roomFriends;
 	
 	/* helper variable for addressing different options:
-	 * option 1 = room
-	 * option 2 = studio
-	 * option 3 = flat
+	 * type 1 = room
+	 * type 2 = studio
+	 * type 3 = flat
+	 * type 4 = house
 	 */
-	private int options;
+	private int propertyType;
 	
 	private boolean studio;
 	private boolean room;
 	private boolean flat;
+	private boolean house;
 	
 	private boolean smokers;
 	private boolean animals;
@@ -269,12 +271,20 @@ public class PlaceAdForm {
 		this.visits = visits;
 	}
 
-	public int getOptions() {
-		return options;
+	public int getPropertyType() {
+		return propertyType;
 	}
 
-	public void setOptions(int options) {
-		this.options = options;
+	public void setPropertyType(int propertyType) {
+		this.propertyType = propertyType;
+	}
+
+	public boolean getHouse() {
+		return house;
+	}
+
+	public void setHouse(boolean house) {
+		this.house = house;
 	}
 
 }

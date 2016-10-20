@@ -51,6 +51,7 @@ function validateType(form)
 	var room = document.getElementById('room');
 	var studio = document.getElementById('studio');
 	var flat = document.getElementById('flat');
+	var house = document.getElementById('house');
 	var neither = document.getElementById('neither');
 	var all = document.getElementById('all');
 	var studioAndFlat = document.getElementById('studioAndFlat');
@@ -59,7 +60,7 @@ function validateType(form)
 	var type = document.getElementById('type');
 	var filtered = document.getElementById('filtered');
 	
-	if(room.checked && studio.checked && flat.checked) {
+	if(room.checked && studio.checked && flat.checked && house.checked) {
 		all.checked = true;
 		neither.checked = false;
 	}
@@ -111,7 +112,8 @@ function validateType(form)
  		<h2>Filter results:</h2>
 		<form:checkbox name="room" id="room" path="roomHelper" /><label>Room</label>
 		<form:checkbox name="studio" id="studio" path="studioHelper" /><label>Studio</label>
-		<form:checkbox name="flat" id="flat" path="flatHelper" /><label>Flat</label>		
+		<form:checkbox name="flat" id="flat" path="flatHelper" /><label>Flat</label>
+		<form:checkbox name="house" id="house" path="houseHelper" /><label>House</label>				
 		<form:checkbox style="display:none" name="neither" id="neither" path="noRoomNoStudioNoFlat" />
 		<form:checkbox style="display:none" name="all" id="all" path="allRoomAndStudioAndFlat" />
 		
@@ -120,7 +122,7 @@ function validateType(form)
 		<form:checkbox style="display:none" name="roomAndStudio" id="roomAndStudio" path="bothRoomAndStudio" />
 		
 		<form:checkbox style="display:none" name="filtered" id="filtered" path="filtered" />
-		<form:errors path="noRoomNoStudioNoFlat" cssClass="validationErrorText" /> <br />
+		<form:errors path="noRoomNoStudioNoFlatNoHouse" cssClass="validationErrorText" /> <br />
 
 		<label for="city">City / zip code:</label>
 		<form:input type="text" name="city" id="city" path="city"
